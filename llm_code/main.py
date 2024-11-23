@@ -108,10 +108,8 @@ if __name__ == '__main__':
 
 
     lines = random_read_lines1('./Wiki80/test.txt')
-    # 获取所有的关系
     relation_dict, relation_dict_inverted = read_dict_from_json('./Wiki80/rel2wiki.json')
     relation_list = list(relation_dict.keys())
-    # 将所有的关系搞成一个字符串
     relation_str = list_to_numbered_string(relation_list)
     result_list = []
     with alive_bar(len(lines),title='wiki80',bar='classic') as bar:
