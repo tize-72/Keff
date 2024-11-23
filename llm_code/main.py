@@ -18,9 +18,9 @@ def run_ollama(prompt,  engine="qwen2"):
     response = ollama.chat(model=engine, 
                             messages=messages, 
                             options={
-                            "temperature":0.0, # default 0.8 模型的温度。增加温度将使模型的回答更具创意
+                            "temperature":0.0, # default 0.8 
                             },
-                            keep_alive = '1m', # 让模型在内存中存在一分钟
+                            keep_alive = '1m', #内存中存在一分钟
                             )
     print(response['message']['content'])
     result = response['message']['content']
@@ -111,7 +111,6 @@ if __name__ == '__main__':
     # 获取所有的关系
     relation_dict, relation_dict_inverted = read_dict_from_json('./Wiki80/rel2wiki.json')
     relation_list = list(relation_dict.keys())
-    # 将所有的关系搞成一个字符串
     relation_str = list_to_numbered_string(relation_list)
     result_list = []
     with alive_bar(len(lines),title='wiki80',bar='classic') as bar:
