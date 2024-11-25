@@ -103,7 +103,8 @@ if __name__ == '__main__':
                                                                           'gpt-3.5-turbo',
                                                                           'gpt-4o-mini',
                                                                           'phi3:14b',
-                                                                          'llama2'])
+                                                                          'llama2',
+                                                                          'qwen2:72b'])
     args = parser.parse_args()
 
 
@@ -143,7 +144,6 @@ if __name__ == '__main__':
                 result_list.append(result_dict)
                 # break
                 bar()
-                if idx >= 2000:break
             except :
                 continue
         write_list_to_json1(result_list, f'{args.LLM_type}_result.json')
