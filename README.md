@@ -1,3 +1,1 @@
-code for KEFF.
-
-The complete code will be made public after the paper is accepted.
+The complete code is published at https://git.openi.org.cn/Jiangzw/KEFF.
